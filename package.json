@@ -1,0 +1,21 @@
+{
+  "name": "Event-Driven",
+  "version": "1.0.0",
+  "description": "",
+  "main": "caps.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Denakof/Event-Driven.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Denakof/Event-Driven/issues"
+  },
+  "homepage": "https://github.com/Denakof/Event-Driven#readme"
+}
