@@ -4,7 +4,7 @@
   "description": "",
   "main": "caps.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node caps.js",
     "test": "jest --coverage"
   },
   "repository": {
@@ -17,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/Denakof/Event-Driven/issues"
   },
-  "homepage": "https://github.com/Denakof/Event-Driven#readme"
+  "homepage": "https://github.com/Denakof/Event-Driven#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "faker": "^5.5.3",
+    "jest": "^27.1.0",
+    "supertest": "^6.1.6"
+  }
 }
