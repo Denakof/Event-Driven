@@ -1,7 +1,11 @@
 "use strict";
+const io=require('socket.io-client');
 require("dotenv").config();
-const events = require("../events");
+// const events = require("../../events");
+const host = process.env.HOST;
+const connectionToCaps=io.connect(`${host}/caps`);
 const faker = require("faker");
+
 
 setInterval(() => {
   const Order = {
@@ -10,14 +14,16 @@ setInterval(() => {
     customer: faker.name.findName(),
     address: faker.address.streetName(),
   };
-  events.emit("pickup", Order);
-  console.log(Order);
+  connectionToCaps.emit("pickup", Order);
+  // console.log(Order);
 }, 5000);
 
 
 
-events.on("delivered", (payload) => {
+connectionToCaps.on("delivered", payload => {
   console.log(`VENDOR: Thank you for delivering ${payload.orderID}`);
 });
 
-module.exports=events
+
+
+module.exports=connectionToCaps;

@@ -15,19 +15,19 @@ jest.useFakeTimers();
 describe('caps test', () => {
 
     it('pickup', () => {
-        const caps = require('../caps');
+        const caps = require('../caps/caps');
         caps.emit('pickup', payload);
         expect(caps.emit('pickup', payload)).toEqual(true);
     });
 
     it('in-transit', () => {
-        const caps = require('../caps');
+        const caps = require('../caps/caps');
         caps.emit('in-transit', payload);
         expect(caps.emit('in-transit', payload)).toEqual(true);
     });
 
     it('delivered', () => {
-        const caps = require('../caps');
+        const caps = require('../caps/caps');
         caps.emit('delivered', payload);
         expect(caps.emit('delivered', payload)).toEqual(true);
     });
@@ -39,7 +39,7 @@ describe('caps test', () => {
 describe('driver test', () => {
 
     it('pickup', () => {
-        const driver = require('../src/driver');
+        const driver = require('../src/driver/driver');
         driver.emit('pickup', payload);
         expect(driver.emit('pickup', payload)).toEqual(true);
     });
@@ -50,7 +50,7 @@ describe('driver test', () => {
 
 describe('vendor test', () => {
     it('delivered', () => {
-        const vendor = require('../src/vendor');
+        const vendor = require('../src/vendor/vendor');
         vendor.emit('delivered', payload);
         expect(vendor.emit('delivered', payload)).toEqual(true);
     });
