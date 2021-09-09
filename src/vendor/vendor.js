@@ -1,6 +1,6 @@
 "use strict";
 require("dotenv").config();
-const events = require("../events");
+const events = require("../../events");
 const faker = require("faker");
 
 setInterval(() => {
@@ -11,7 +11,7 @@ setInterval(() => {
     address: faker.address.streetName(),
   };
   events.emit("pickup", Order);
-  console.log(Order);
+
 }, 5000);
 
 

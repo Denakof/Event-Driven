@@ -1,5 +1,5 @@
 "use strict";
-const events = require("../events");
+const events = require("../../events");
 
 events.on("pickup", (payload) => {
   setTimeout(() => {
@@ -8,7 +8,7 @@ events.on("pickup", (payload) => {
   }, 1000);
 });
 
-events.on("pickup", (payload) => {
+events.on("in-transit", (payload) => {
   setTimeout(() => {
     console.log(`delivered ${payload.orderID}`);
     events.emit("delivered", payload);

@@ -1,8 +1,8 @@
 "use strict";
 const events = require("./events");
 
-require("./src/driver");
-require("./src/vendor");
+require("./src/driver/driver");
+require("./src/vendor/vendor");
 
 //pick up
 
@@ -26,7 +26,7 @@ events.on("in-transit", (payload) => {
 
 events.on('delivered', (payload) => {
     console.log("EVENTS", {
-      event: "in-delivered",
+      event: "delivered",
       time: new Date().toLocaleDateString(),
       payload: payload,
     });
