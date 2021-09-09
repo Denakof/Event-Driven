@@ -18,10 +18,12 @@ setInterval(() => {
   // console.log(Order);
 }, 5000);
 
+connectionToCaps.emit("bringVendor");
 
 
 connectionToCaps.on("delivered", payload => {
   console.log(`VENDOR: Thank you for delivering ${payload.orderID}`);
+
 });
 
 
