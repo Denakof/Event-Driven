@@ -1,6 +1,6 @@
 'use strict';
 
-const events = require('../events');
+// const events = require('../events');
 const supertest = require('supertest');
 
 let payload = {
@@ -36,7 +36,7 @@ describe('caps test', () => {
 });
 
 
-describe('driver test', () => {
+xdescribe('driver test', () => {
 
     it('pickup', () => {
         const driver = require('../src/driver/driver');
@@ -48,7 +48,7 @@ describe('driver test', () => {
 
 
 
-describe('vendor test', () => {
+xdescribe('vendor test', () => {
     it('delivered', () => {
         const vendor = require('../src/vendor/vendor');
         vendor.emit('delivered', payload);

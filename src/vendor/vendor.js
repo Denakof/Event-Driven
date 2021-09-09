@@ -2,7 +2,7 @@
 const io=require('socket.io-client');
 require("dotenv").config();
 // const events = require("../../events");
-const host = process.env.HOST;
+const host = process.env.HOST || "http://localhost:4000";
 const connectionToCaps=io.connect(`${host}/caps`);
 const faker = require("faker");
 
